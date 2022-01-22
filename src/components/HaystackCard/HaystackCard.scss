@@ -1,0 +1,75 @@
+@import "../../app/App.scss";
+
+.hs-card {
+  &-header {
+    font: 400 2.4rem "Lilita One";
+    height: 3rem;
+    width: 100%;
+
+    text {
+      fill: #fff;
+      stroke: #842029;
+      stroke-linejoin: round;
+      text-transform: uppercase;
+
+      @include xsScreen {
+        font-size: 1.6rem;
+      }
+
+      @include smScreen {
+        font-size: 1.6rem;
+      }
+
+      @include mdScreen {
+        font-size: 2rem;
+      }
+
+      &.bottom {
+        stroke-width: 10px;
+
+        @include xsScreen {
+          stroke-width: 6px;
+        }
+
+        @include smScreen {
+          stroke-width: 6px;
+        }
+
+        @include mdScreen {
+          stroke-width: 8px;
+        }
+      }
+
+      &.top {
+        stroke-width: 1px;
+      }
+    }
+  }
+
+  &-body {
+    &.titleless {
+      margin-top: 1.75rem;
+
+      @include xsScreen {
+        margin-top: 0;
+      }
+
+      @include smScreen {
+        margin-top: 0;
+      }
+
+      @include mdScreen {
+        margin-top: 0;
+      }
+    }
+
+    &:not(.titleless) {
+      margin-top: -1.25rem;
+    }
+
+    &.borderless {
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+}

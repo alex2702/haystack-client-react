@@ -1,0 +1,34 @@
+@import "../../app/App.scss";
+
+.hs-header {
+  font: 400 2.75rem "Lilita One";
+  height: 3rem;
+
+  @include xsScreen {
+    height: 1.8rem;
+  }
+
+  @include smScreen {
+    height: 1.8rem;
+  }
+
+  @include mdScreen {
+    height: 2.4rem;
+  }
+}
+.hs-header text {
+  fill: #fff;
+  stroke: #842029;
+  stroke-linejoin: round;
+  text-transform: uppercase;
+}
+.hs-header text.bottom {
+  stroke: #fff;
+  stroke-width: 10px;
+}
+.hs-header text.center {
+  stroke-width: 5px;
+}
+.hs-header text.top {
+  stroke-width: 1px;
+}
