@@ -4,7 +4,7 @@ import {HaystackCard} from "../../components/HaystackCard/HaystackCard";
 import {useNavigate} from 'react-router-dom';
 
 export const HomeActions = () => {
-    let navigate = useNavigate()
+    const navigate = useNavigate()
 
     function createGame() {
         navigate('/room/create')

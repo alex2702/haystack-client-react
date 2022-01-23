@@ -9,6 +9,7 @@ import {ChakraProvider, Container} from "@chakra-ui/react";
 import {HaystackTheme} from "./HaystackTheme";
 import {HaystackRoom} from "../pages/Room/HaystackRoom";
 import {Header} from "../components/Header/Header";
+import GameProvider from "../context/GameContext";
 
 function App() {
     return (
@@ -18,7 +19,7 @@ function App() {
                     <Header />
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/room/*" element={<HaystackRoom />} />
+                        <Route path="/room/*" element={<GameProvider><HaystackRoom /></GameProvider>} />
                     </Routes>
                 </Container>
             </Router>
