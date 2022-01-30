@@ -1,7 +1,8 @@
 # Haystack Client (React)
 
 This is a (work-in-progress) client/frontend implementation of Haystack, a multiplayer geography quiz game. 
-It is implemented in TypeScript and the React framework.
+It is implemented in TypeScript and the React framework. The UI is realized with
+[Chakra UI](https://github.com/chakra-ui/chakra-ui).
 
 Communication with the backend is realized with
 [colyseus.js](https://docs.colyseus.io/colyseus/getting-started/javascript-client/) via Websockets.
@@ -19,6 +20,18 @@ For rules and features of the game, see
 
 ![Lobby](/screenshot_lobby.png "Lobby")
 ![Solution of a Round](/screenshot_result.png "Solution of a Round")
+
+## Known Issues
+
+- The player list doesn't update right away after someone leaves the room.
+- The scores table marks players that are not taking part in the current game (or have left the room) with "no guess".
+  Instead, they shouldn't be included in the table at all.
+- The countdown before a round is currently shown even for players that are waiting in the lobby and not taking part
+  in the current game.
+- The listener for the `player/finished` message is not yet implemented, which means that the player list isn't update
+  after a player has made their guess.
+- Some React components seem to render too often. Investigate with a tool like 
+  [why-did-you-render](https://github.com/welldone-software/why-did-you-render).
 
 ## Running the Project
 
